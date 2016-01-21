@@ -10,10 +10,12 @@ import java.io.IOException;
  *
  */
 public class KisoKadai3Inp {
-	String fileN;
+	String fileN,dirN;
 	@SuppressWarnings("resource")
-	void fileNIn(){
+	void fdN(){
 		System.out.println("ファイルに追記します");
+		System.out.println("フォルダを指定してください");
+		this.dirN = new java.util.Scanner(System.in) .nextLine();
 		System.out.println("追記したいファイル名を保存場所名から入力してください");
 		this.fileN = new java.util.Scanner(System.in) .nextLine();
 	}
@@ -26,10 +28,10 @@ public class KisoKadai3Inp {
 	public void inp(){
 		FileWriter fw = null;
 		try{
-			fw = new FileWriter("C:\\Users\\internous\\Documents\\" + this.fileN,true);
+			fw = new FileWriter(this.dirN + this.fileN,true);
 			fw.write(this.input1 + "\r\n");
 			fw.flush();
-			System.out.println("Documentsの" + this.fileN + "に"+ this.input1 + "を追記しました");
+			System.out.println(this.dirN + "の" + this.fileN + "に"+ this.input1 + "を追記しました");
 		}catch(IOException e){
 				System.out.println("ファイル書き込みエラーです");
 		}finally{

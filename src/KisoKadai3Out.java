@@ -3,17 +3,20 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class KisoKadai3Out {
-	String fileN;
+	String fileN,dirN;
 	@SuppressWarnings("resource")
-	void fileN(){
-		System.out.println("ファイルを出力します。ファイル名を入力してください");
+	void fdN(){
+		System.out.println("ファイルを出力します。");
+		System.out.println("フォルダを指定してください");
+		this.dirN = new java.util.Scanner(System.in) .nextLine();
+		System.out.println("出力するファイル名を入力してください");
 		this.fileN = new java.util.Scanner(System.in) .nextLine();
 	}
 	void out(){
 		FileReader fileR = null;
 		try{
-			fileR = new FileReader("C:\\Users\\internous\\Documents\\" + this.fileN);
-			System.out.println("C:\\Users\\internous\\Documents\\" + this.fileN + "を出力します");
+			fileR = new FileReader(this.dirN + this.fileN);
+			System.out.println(this.dirN + "の" + this.fileN + "を出力します");
 		  	int ch;
 			while((ch = fileR.read()) != -1){
 			  System.out.print((char)ch);

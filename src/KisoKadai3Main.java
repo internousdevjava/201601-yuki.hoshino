@@ -91,18 +91,18 @@ public class KisoKadai3Main {
 			}
 			if(nu == 1){
 				System.out.println("ファイルを作成");
-				m.fileN();
+				m.fdN();
 				m.mkdir();
 			}
 			if(nu == 2){
 				System.out.println("ファイルに追記する");
-				i.fileNIn();
+				i.fdN();
 				i.input();
 				i.inp();
 			}
 			if(nu == 3){
 				System.out.println("ファイルを出力");
-				o.fileN();
+				o.fdN();
 				o.out();
 			}
 		}
