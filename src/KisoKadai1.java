@@ -13,8 +13,10 @@ public class KisoKadai1 {
 	 */
 	public static void main(String[] args){
 		System.out.println("数字を入力してください");
+		@SuppressWarnings("resource")
 		int x = new java.util.Scanner(System.in). nextInt();
 		System.out.println("もう一度数字を入力してください");
+		@SuppressWarnings("resource")
 		int y = new java.util.Scanner(System.in). nextInt();
 		for(int i = 1; i <= x; i++){
 			for(int j = 1; j <= y; j++){
