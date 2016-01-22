@@ -22,55 +22,7 @@ public class KisoKadai3Main {
 		KisoKadai3Mkdir d = new KisoKadai3Mkdir();
 		KisoKadai3Out o = new KisoKadai3Out();
 		KisoKadai3Mkfile f = new KisoKadai3Mkfile();
-		/*
-		System.out.println("1キー：ファイルに追記");
-		System.out.println("2キー：ファイルを作成");
-		System.out.println("3キー：ファイルを出力");
-		for(;;){
-			@SuppressWarnings("resource")
-			String cmd1 = new java.util.Scanner(System.in) .nextLine();
-			switch(cmd1){
-			case "1":
-				i.fileNIn();
-				i.input();
-				i.inp();
-				System.out.println("qキーを押してください");
-				String cmdInp = new java.util.Scanner(System.in) .nextLine();
-				if(cmdInp == "q"){
-					break;
-				}
-				break;
-			case "2":
-				m.fileN();
-				m.mkdir();
-				System.out.println("qキーを押してください");
-				String cmdMkd = new java.util.Scanner(System.in) .nextLine();
-				if(cmdMkd == "q"){
-					break;
-				}
-				break;
-			case "3":
-				o.fileN();
-				o.out();
-				System.out.println("出力しました");
-				System.out.println("qキーを押してください");
-				String cmdOut = new java.util.Scanner(System.in) .nextLine();
-				if(cmdOut == "q"){
-					break;
-				}
-				break;
-			default:
-				System.out.println("上記キー以外のキーが押されました");
-				break;
-			}
-			System.out.println("4キーで終了します");
-			@SuppressWarnings("resource")
-			int cmd2 = new java.util.Scanner(System.in) .nextInt();
-			if(cmd2 == 4){
-				break;
-			}
-		}
-		*/
+
 		int end = 0;
 		do{
 
