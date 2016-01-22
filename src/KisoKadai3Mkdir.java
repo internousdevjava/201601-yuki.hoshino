@@ -1,24 +1,18 @@
 import java.io.File;
-import java.io.IOException;
 
 public class KisoKadai3Mkdir {
-	String fileN,dirN;
+	String dirN1,dirN2;
 	@SuppressWarnings("resource")
 	void fdN(){
-		System.out.println("ファイルを作成します");
-		System.out.println("保存するフォルダを指定してください");
-		this.dirN = new java.util.Scanner(System.in) .nextLine();
-		System.out.println("ファイル名を入力してください");
-		this.fileN = new java.util.Scanner(System.in) .nextLine();
+		System.out.println("フォルダを作成します");
+		System.out.println("保存するフォルダを絶対パスで指定してください");
+		this.dirN1 = new java.util.Scanner(System.in) .nextLine();
+		System.out.println("フォルダ名を入力してください");
+		this.dirN2 = new java.util.Scanner(System.in) .nextLine();
 	}
 	public void mkdir(){
-		File newfile = new File(this.dirN + this.fileN);
-		try {
-			newfile.createNewFile();
-			System.out.println(this.dirN + "に" + this.fileN + "が作成されました");
-		} catch (IOException e) {
-			// TODO 自動生成された catch ブロック
-			e.printStackTrace();
-		}
+		File newdir = new File(this.dirN1 + this.dirN2);
+		newdir.mkdir();
+		System.out.println(this.dirN1 + "に" + this.dirN2 + "が作成されました");
 	}
 }

@@ -19,8 +19,9 @@ public class KisoKadai3Main {
 	public static void main(String[] args) throws IOException {
 		// TODO 自動生成されたメソッド・スタブ
 		KisoKadai3Inp i = new KisoKadai3Inp();
-		KisoKadai3Mkdir m = new KisoKadai3Mkdir();
+		KisoKadai3Mkdir d = new KisoKadai3Mkdir();
 		KisoKadai3Out o = new KisoKadai3Out();
+		KisoKadai3Mkfile f = new KisoKadai3Mkfile();
 		/*
 		System.out.println("1キー：ファイルに追記");
 		System.out.println("2キー：ファイルを作成");
@@ -73,8 +74,7 @@ public class KisoKadai3Main {
 		int end = 0;
 		do{
 
-			System.out.println("\n\n--メニュー--\n\n 1:ファイルを作成する\n 2:ファイルに追記する\n 3:ファイルを出力する\n "
-					+ "99:終了\nのどれかをキー入力してください");
+			System.out.println("\n\n--メニュー--\n\n1:フォルダを作成する\n2:ファイルを作成する\n3:ファイルに追記する\n4:ファイルを出力する\n99:終了\nのどれかをキー入力してください");
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 			String str = br.readLine();
 			int nu = 0;
@@ -90,17 +90,22 @@ public class KisoKadai3Main {
 				break;
 			}
 			if(nu == 1){
-				System.out.println("ファイルを作成");
-				m.fdN();
-				m.mkdir();
+				System.out.println("フォルダを作成");
+				d.fdN();
+				d.mkdir();
 			}
 			if(nu == 2){
+				System.out.println("ファイルを作成");
+				f.fdN();
+				f.mkfile();
+			}
+			if(nu == 3){
 				System.out.println("ファイルに追記");
 				i.fdN();
 				i.input();
 				i.inp();
 			}
-			if(nu == 3){
+			if(nu == 4){
 				System.out.println("ファイルを出力");
 				o.fdN();
 				o.out();
