@@ -2,15 +2,15 @@ import java.io.IOException;
 
 public class KK2v2GameCPU {
 	public void game() throws IOException{
-		System.out.println("CPUより先に数を当ててください\nターン数が100になるまでに当ててください");
+		System.out.println("CPUより先に数を当ててください\nターン数が20になるまでに当ててください");
 		System.out.println("\n====スタート====");
 		System.out.println("数字を入力してください");
-		int ans = new java.util.Random() .nextInt(100);
+		int ans = new java.util.Random() .nextInt(20);
 		int a = 0;
-			for(int i = 1; i <= 100; i++){
+			for(int i = 1; i <= 20; i++){
 				@SuppressWarnings("resource")
 				int input = new java.util.Scanner(System.in). nextInt();
-				int enemy = new java.util.Random() .nextInt(100);
+				int enemy = new java.util.Random() .nextInt(20);
 				if(enemy == ans){
 					System.out.println("enemy true! \n CPUの勝ちです");
 					break;
