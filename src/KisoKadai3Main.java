@@ -71,10 +71,10 @@ public class KisoKadai3Main {
 		}
 		*/
 		int end = 0;
-		while(end == 0){
+		do{
 
 			System.out.println("\n\n--メニュー--\n\n 1:ファイルを作成する\n 2:ファイルに追記する\n 3:ファイルを出力する\n "
-					+ "99:終了\nを入力してください");
+					+ "99:終了\nのどれかをキー入力してください");
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 			String str = br.readLine();
 			int nu = 0;
@@ -95,7 +95,7 @@ public class KisoKadai3Main {
 				m.mkdir();
 			}
 			if(nu == 2){
-				System.out.println("ファイルに追記する");
+				System.out.println("ファイルに追記");
 				i.fdN();
 				i.input();
 				i.inp();
@@ -105,7 +105,7 @@ public class KisoKadai3Main {
 				o.fdN();
 				o.out();
 			}
-		}
+		}while(end < 1);
 		System.out.println("--処理終了--");
 	}
 }
