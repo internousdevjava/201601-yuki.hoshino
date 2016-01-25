@@ -69,10 +69,23 @@ public class KisoKadai3 {
 				input1 = new java.util.Scanner(System.in) .nextLine();
 				FileWriter fw = null;
 				try{
-					fw = new FileWriter(dirN +"\\"+ fileN,true);
-					fw.write(input1 + "\r\n");
-					fw.flush();
-					System.out.println(dirN + "の" + fileN + "に"+ input1 + "を追記しました");
+					System.out.println("追記する場合は1\n上書きする場合は2\nキャンセルの場合は3を押してください");
+					int input2 = new java.util.Scanner(System.in) .nextInt();
+					if(input2 == 1){
+						fw = new FileWriter(dirN +"\\"+ fileN,true);
+						fw.write(input1 + "\r\n");
+						fw.flush();
+						System.out.println(dirN + "の" + fileN + "に"+ input1 + "を追記しました");
+					}else if(input2 == 2){
+						fw = new FileWriter(dirN +"\\"+ fileN,false);
+						fw.write(input1 + "\r\n");
+						fw.flush();
+						System.out.println(dirN + "の" + fileN + "に"+ input1 + "を上書きしました");
+					}else if(input2 == 3){
+						System.out.println("キャンセルしました。メニューに戻ります");
+						return;
+					}
+
 				}catch(IOException e){
 						System.out.println("ファイル書き込みエラーです");
 				}finally{
@@ -165,7 +178,7 @@ public class KisoKadai3 {
 
 		int end = 0;
 		do{
-			System.out.println("\n\n--メニュー--\n\n1:フォルダを作成する\n2:ファイルを作成する\n3:ファイルに追記する\n4:ファイルを出力する\n5:ファイル、フォルダを削除する\n99:終了\nのどれかをキー入力してください");
+			System.out.println("\n\n--メニュー--\n\n1:フォルダを作成する\n2:ファイルを作成する\n3:ファイルに追記、上書きする\n4:ファイルを出力する\n5:ファイル、フォルダを削除する\n99:終了\nのどれかをキー入力してください");
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 			String str = br.readLine();
 			int nu = 0;
@@ -191,7 +204,7 @@ public class KisoKadai3 {
 
 			}
 			if(nu == 3){
-				System.out.println("ファイルに追記");
+				System.out.println("ファイルに追記または上書き");
 				Inp();
 
 			}
