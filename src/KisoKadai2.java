@@ -23,9 +23,9 @@ public class KisoKadai2 {
 				}
 
 				if(input > ans){
-					System.out.println("ヒント：小さいです");
+					System.out.println("ヒント：答えは入力した数より小さいです");
 				}else if(input < ans){
-					System.out.println("ヒント：大きいです");
+					System.out.println("ヒント：答えは入力した数より大きいです");
 				}
 				a++;
 				System.out.println("現在のターン数 : " + a);
