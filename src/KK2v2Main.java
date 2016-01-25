@@ -31,7 +31,7 @@ public class KK2v2Main {
 			if(str.matches("^[0-9]+$")){
 				nu = Integer.parseInt(str);
 			}else{
-				System.out.println("\n----------\n半角数値でメニューを選択してください。\n----------\n");
+				System.out.println("\n-----------\n半角数値でメニューを選択してください。\n----------\n");
 			}
 
 			if(nu == 99){
