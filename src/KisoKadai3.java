@@ -15,7 +15,6 @@ public class KisoKadai3 {
 		dirN1 = new java.util.Scanner(System.in) .nextLine();
 		File fileC = new File(dirN1);
 		if (fileC.exists()){
-		    System.out.println("フォルダは存在します");
 		    System.out.println("フォルダ名を入力してください");
 			dirN2 = new java.util.Scanner(System.in) .nextLine();
 			File newdir = new File(dirN1 +"\\"+ dirN2);
