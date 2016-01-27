@@ -26,5 +26,4 @@ public class Exercise05 {
 		asai.display();
 		System.out.println("--------------------------------");
 	}
-
 }
