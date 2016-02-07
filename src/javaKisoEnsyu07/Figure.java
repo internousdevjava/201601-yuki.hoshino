@@ -1,4 +1,4 @@
-package JavaKisoEnsyu06;
+package javaKisoEnsyu07;
 
 public class Figure {
 	private int base;
@@ -13,10 +13,7 @@ public class Figure {
 		System.out.println("高さ:" + height + " cm");
 	}
 	public double getArea(){
-		return 0.0;
-	}
-	public void setArea(double Area){
-		Area = this.base * this.height;
+		return this.base * this.height;
 	}
 	public void setBase(int base){
 		if(base > 0){
