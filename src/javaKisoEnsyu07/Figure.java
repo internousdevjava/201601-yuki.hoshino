@@ -5,15 +5,16 @@ public class Figure {
 	private int height;
 
 	public Figure(int base,int height){
-		setBase(base);
-		setHeight(height);
+		this.base = base;
+		this.height = height;
 	}
 	public void show(){
-		System.out.println("底辺:" + base + " cm");
-		System.out.println("高さ:" + height + " cm");
+		System.out.println("底辺:" + this.base + " cm");
+		System.out.println("高さ:" + this.height + " cm");
+		System.out.println("面積:" +(double)(this.base * this.height) + "平方cm");
 	}
 	public double getArea(){
-		return this.base * this.height;
+		return 0.0;
 	}
 	public void setBase(int base){
 		if(base > 0){
@@ -26,9 +27,9 @@ public class Figure {
 		}
 	}
 	public int getBase(){
-		return base;
+		return this.base;
 	}
 	public int getHeight(){
-		return height;
+		return this.height;
 	}
 }

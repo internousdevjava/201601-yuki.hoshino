@@ -1,8 +1,8 @@
 package javaKisoEnsyu07;
 
 public class Quadrangle extends Figure{
-	public Quadrangle(){
-		super(9,15);
+	public Quadrangle(int b, int h){
+		super(b,h);
 	}
 
 	public void show(){
@@ -11,7 +11,7 @@ public class Quadrangle extends Figure{
 		super.getArea();
 	}
 
-	public double gerArea(){
-		return 9 * 15;
+	public double getArea(){
+		return super.getArea();
 	}
 }
