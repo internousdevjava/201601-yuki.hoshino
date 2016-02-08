@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="mongo" namespace="/" extends="struts-default">
+<!-- MONGOへ画面遷移アクション -->
+
+
+<!-- MONGOへ商品情報をinsertアクション -->
+<action name="MInsertAction" class="action.MInsertAction" method="execute">
+	<result name="success">mongoTest.jsp</result>
+</action>
+
+<!-- MONGOへ商品情報を表示するアクション -->
+<action name="MDisplayAction" class="action.MDisplayAction" method="execute">
+	<result name="success">mongoTest.jsp</result>
+</action>
+
+<!-- MONGOの商品情報を削除するアクション -->
+<action name="MDeleteAction" class="action.MDeleteAction" method="execute">
+		<result name="success">/mongoTest.jsp</result>
+		<result name="error">/mongoTest.jsp</result>
+</action>
+
+
+<!-- MONGOの商品情報を更新するアクション -->
+<action name="MUpdateAction" class="action.MUpdateAction" method="execute">
+		<result name="success">/mongoTest.jsp</result>
+		<result name="error">/mongoTest.jsp</result>
+</action>
+
+
+<!-- MONGOへお問い合わせをinsertアクション -->
+<action name="MContactInsertAction" class="action.MContactInsertAction" method="execute">
+	<result name="success">mongoTest.jsp</result>
+</action>
+
+<!-- MONGOへお問い合わせ情報を表示するアクション -->
+<action name="MContactDisplayAction" class="action.MContactDisplayAction" method="execute">
+	<result name="success">mongoTest.jsp</result>
+</action>
+</package>
+
+
+
+</struts>
