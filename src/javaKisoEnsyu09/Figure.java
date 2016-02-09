@@ -11,10 +11,10 @@ public class Figure {
 	public void show(){
 		System.out.println("底辺:" + this.base + " cm");
 		System.out.println("高さ:" + this.height + " cm");
-		System.out.println("面積:" +(double)(this.base * this.height) + "平方cm");
+		System.out.println("面積:" + getArea() + "平方cm");
 	}
 	public double getArea(){
-		return 0.0;
+		return (double)(this.base * this.height);
 	}
 	public void setBase(int base){
 		if(base > 0){

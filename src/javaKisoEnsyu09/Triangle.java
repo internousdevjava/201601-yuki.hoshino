@@ -7,10 +7,11 @@ public class Triangle extends Figure{
 		super(b, h);
 	}
 	public void show(){
+		System.out.println("三角形のデータ");
 		super.show();
 		super.getArea();
 	}
 	public double getArea(){
-		return super.getArea();
+		return super.getArea() / 2.0;
 	}
 }
