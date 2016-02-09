@@ -64,7 +64,7 @@ public class Employee {
 	    return age;
 	  }
 	  //総社員数を表示するメソッド
-	  public static void showTotalNumber(){
+	  public void showTotalNumber(){
 	    System.out.println("総社員数は"+number+"人です。");
 	  }
 
