@@ -4,11 +4,39 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/**
+ * @author Y.Hoshino
+ * @version 1.0
+ * データベースに接続するクラス
+ *
+ */
 public class DBConnector {
+
+	/**
+	 * com.mysql.jdbc.Driverを格納する変数
+	 */
 	private static String driverName = "com.mysql.jdbc.Driver";
-	private static String url = "jdbc:mysql://localhost/"; //struts2 DB名
-	private static String user = "root"; //DBのユーザ名
-	private static String pass = "mysql";  //DBに接続するときのパスワード
+
+	/**
+	 *ローカルホストのurlを格納する変数
+	 */
+	private static String url = "jdbc:mysql://localhost/";
+
+	/**
+	 *mysqlのユーザー名を格納する変数
+	 */
+	private static String user = "root";
+
+	/**
+	 *mysqlのログインパスワードを格納する変数
+	 */
+	private static String pass = "mysql";
+
+	/**
+	 * データベースに接続するメソッド
+	 * @param DBName
+	 * @return nullのconを返します。
+	 */
 	public static Connection getConnection(String DBName){
 		StringBuffer sBuffer = new StringBuffer("");
 		sBuffer.append(url);

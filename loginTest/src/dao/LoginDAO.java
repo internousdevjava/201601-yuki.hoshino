@@ -10,8 +10,18 @@ import com.opensymphony.xwork2.ActionSupport;
 import dto.LoginDTO;
 import util.DBConnector;
 
+/**
+ * @author Y.Hoshino
+ * @version 1.0
+ * データベースとに繋ぎ、ユーザーネームとパスワードの有無を確認するクラス
+ */
 public class LoginDAO extends ActionSupport{
-	LoginDTO dto = new LoginDTO();
+	/**
+	 * 入力されたユーザーネームとパスワードを、データベースにあるユーザーネームとパスワードと照合するメソッド
+	 * @param user_name
+	 * @param pass
+	 * @return boolean型で、ユーザーネームとパスワードがあればtrue、無ければfalseを返します。
+	 */
 	public boolean selectDB(String user_name, String pass){
 		boolean result = false;
 		Connection con = DBConnector.getConnection("loginTest");
