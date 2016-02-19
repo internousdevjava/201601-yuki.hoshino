@@ -19,6 +19,8 @@ public class LoginAction extends ActionSupport{
 		}
 		LoginDTO dto = new LoginDTO(user_name, pass);
 		session.put("user_name", dto.getUser_name());
+		session.put("user_name", user_name);
+		session.put("pass", pass);
 
 		return "success";
 	}

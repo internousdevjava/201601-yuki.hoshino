@@ -13,6 +13,7 @@ public class LoginDAO {
 		Connection con = DBConnector.getConnection("loginTest");
 		String sql = "select * from user where user_name = ? and pass = ?";
 		try{
+			sql+= " user_name = ? AND pass = ? ";
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, user_name);
 			ps.setString(2, pass);

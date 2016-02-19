@@ -4,8 +4,8 @@
 
 	<package name="loginTest" namespace="/" extends="struts-default">
 
-		<action name="LoginAction" class="action.LoginAction" method="excecute">
-			<result name="success">/Login.jsp</result>
+		<action name="LoginAction" class="action.LoginAction" method="execute">
+			<result name="success">loginSuccess.jsp</result>
 			<result name="error">/Login.jsp</result>
 		</action>
 	</package>
