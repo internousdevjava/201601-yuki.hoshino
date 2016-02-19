@@ -5,7 +5,6 @@ import java.util.Map;
 import com.opensymphony.xwork2.ActionSupport;
 
 import dao.LoginDAO;
-import dto.LoginDTO;
 
 public class LoginAction extends ActionSupport{
 	private String user_name;
@@ -17,10 +16,6 @@ public class LoginAction extends ActionSupport{
 		if(!res){
 			return "error";
 		}
-		LoginDTO dto = new LoginDTO(user_name, pass);
-		session.put("user_name", dto.getUser_name());
-		session.put("user_name", user_name);
-		session.put("pass", pass);
 
 		return "success";
 	}

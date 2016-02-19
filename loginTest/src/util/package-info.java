@@ -2,7 +2,7 @@
  * 
  */
 /**
- * @author internous
+ * @author ホシ
  *
  */
 package util;

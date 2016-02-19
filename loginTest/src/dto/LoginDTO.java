@@ -3,9 +3,7 @@ package dto;
 public class LoginDTO {
 	private String user_name;
 	private String pass;
-	public LoginDTO(String userName, String userPass){
-		this.user_name = userName;
-		this.pass = userPass;
+	public LoginDTO(){
 	}
 	public String getUser_name() {
 		return user_name;

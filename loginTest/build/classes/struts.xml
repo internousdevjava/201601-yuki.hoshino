@@ -6,7 +6,7 @@
 
 		<action name="LoginAction" class="action.LoginAction" method="execute">
 			<result name="success">loginSuccess.jsp</result>
-			<result name="error">/Login.jsp</result>
+			<result name="error">loginError.jsp</result>
 		</action>
 	</package>
 </struts>
